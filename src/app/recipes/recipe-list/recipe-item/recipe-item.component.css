@@ -1,0 +1,12 @@
+.img-fluid {
+  max-width: 150px;
+  max-height: 80px; }
+
+.list-group-item {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
+}
+
+/*# sourceMappingURL=recipe-item.component.css.map */

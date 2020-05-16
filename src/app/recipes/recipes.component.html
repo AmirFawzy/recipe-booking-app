@@ -1,0 +1,12 @@
+<div class="row mt-4">
+  <div class="col-md-5">
+    <app-recipe-list></app-recipe-list>
+  </div>
+  <div class="col-md-7" [@recipeDetailsAnime]="outlet.isActivated ? outlet.activatedRoute : null">
+    <router-outlet #outlet="outlet"></router-outlet>
+    <!-- <app-recipe-detail [recipe]="recipeSelected" *ngIf="recipeSelected;else noRecipeSelected"></app-recipe-detail>
+    <ng-template #noRecipeSelected>
+      <p>Please select a recipe.</p>
+    </ng-template> -->
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<!-- <div class="w-100 mb-4" *ngIf="signupServ.isAuthenticated()"> -->
+<div class="w-100 mb-4" *ngIf="(authState | async).authenticated">
+    <button class="btn btn-sm btn-success" (click)="onNewRecipe()">New Recipe</button>
+</div>
+<div class="w-100">
+    <div class="list-group">
+        <app-recipe-item (click)="selectRecipeItem($event, i)" [ngClass]="{'selected': recipeItemID === i}" *ngFor="let recipeItem of (recipesState | async).recipes; let i = index" [recipe]="recipeItem" [routerLink]="['/recipes', i]" routerLinkActive="select"></app-recipe-item>
+    </div>
+</div>
+
+<!-- [ngStyle]="{'border-radius': i === 0 ? '4px 4px 0 0' : i === (recipes.length - 1) ? '0 0 4px 4px' : 0}" -->

@@ -1,0 +1,22 @@
+<div class="row justify-content-center">
+  <div class="col-6 col-md-8">
+    <h2 class="mb-0 px-3 py-3">Signin</h2>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="px-3 py-3">
+      <div class="alert alert-danger" role="alert" *ngIf="this.signupServ.signinError">
+        {{ signinErrorMsg }}
+      </div>
+      <div class="form-group">
+        <label for="mail"><b>Mail</b></label>
+        <input type="text" name="mail" id="mail" class="form-control" ngModel email required #mail="ngModel">
+        <div class="mt-1 text-muted validation-error small" *ngIf="mail.errors?.required && mail.touched">This field is required.</div>
+        <div class="mt-1 text-muted validation-error small" *ngIf="mail.invalid && mail.touched && mail.dirty">Please enter valid email.</div>
+      </div>
+      <div class="form-group">
+        <label for="password"><b>Password</b></label>
+        <input type="password" name="password" id="password" class="form-control" minlength="6" ngModel required #password="ngModel">
+        <div class="mt-1 text-muted validation-error small" *ngIf="password.errors?.required && password.touched">This field is required.</div>
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="f.invalid">Signin</button>
+    </form>
+  </div>
+</div>

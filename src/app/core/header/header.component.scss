@@ -1,0 +1,16 @@
+.navbar-expand-md {
+    margin-bottom: 1em;
+
+    .navbar-collapse {
+        justify-content: space-between;
+    }
+    .navbar-nav {
+        .dropdown-menu {
+            left: inherit;
+            right: 0;
+        }
+        .nav-link.selected {
+            color: #fff;
+        }
+    }
+}

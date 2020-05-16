@@ -1,0 +1,20 @@
+input.ng-invalid.ng-touched {
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, .4);
+    border-color: red;
+}
+
+.form-group .validation-error {
+    color: red !important;
+}
+
+h2 {
+    background-color: rgb(230, 230, 230);
+    border-radius: 4px 4px 0 0;
+    color: #333;
+}
+
+form {
+    box-shadow: 0 2px 1px 0px rgba(0, 0, 0, .12);
+    border: 1px solid #eee;
+    border-radius: 0 0 4px 4px;
+}

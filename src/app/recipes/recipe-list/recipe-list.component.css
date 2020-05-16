@@ -1,0 +1,45 @@
+.list-group .img-fluid {
+  max-width: 150px;
+  max-height: 80px;
+}
+
+.selected {
+  background-color: #f8f9fa;
+  color: rgb(0, 0, 0, 127)
+}
+
+.select {
+  background-color: #f8f9fa !important;
+  color: rgb(0, 0, 0, 127);
+}
+
+app-recipe-item {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  border-bottom: 0;
+  border-top: 0;
+  outline: 0;
+}
+
+app-recipe-item:first-child {
+  border-radius: 4px 4px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+app-recipe-item:last-child {
+  border-radius: 0 0 4px 4px;
+  border-bottom: 1px solid #ddd;
+}
+
+app-recipe-item:not(:last-child):after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 300px;
+  height: 1px;
+  background-color: #ddd;
+}
+/*# sourceMappingURL=recipe-list.component.css.map */

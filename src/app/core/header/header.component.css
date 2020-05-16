@@ -1,0 +1,15 @@
+.navbar-expand-md {
+  margin-bottom: 1em;
+}
+.navbar-expand-md .navbar-collapse {
+  justify-content: space-between;
+}
+.navbar-expand-md .navbar-nav .dropdown-menu {
+  left: inherit;
+  right: 0;
+}
+.navbar-expand-md .navbar-nav .nav-link.selected {
+  color: #fff;
+}
+
+/*# sourceMappingURL=header.component.css.map */
